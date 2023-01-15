@@ -11,7 +11,7 @@ async function login(url, account, username, password)
 
     let lt = dom.window.document.getElementsByName('lt');
     let execution = dom.window.document.getElementsByName('execution');
-    lt = lt[0].value;
+    if (lt[0] != undefined) lt = lt[0].value;
     execution = execution[0].value;
 
     dom = await getDOM({
